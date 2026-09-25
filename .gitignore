@@ -1,0 +1,56 @@
+# ==========================================
+# Archivos de compilación de Java (En cualquier subcarpeta)
+# ==========================================
+*.class
+*.jar
+*.war
+*.ear
+
+# Directorios de salida de compilación
+bin/
+**/bin/
+target/
+**/target/
+build/
+**/build/
+out/
+**/out/
+
+# ==========================================
+# IDEs y Editores de Código
+# ==========================================
+
+# Cursor & VS Code
+.vscode/
+**/.vscode/
+
+# IntelliJ IDEA
+.idea/
+**/.idea/
+*.iml
+**/*.iml
+
+# NetBeans
+nbproject/
+**/nbproject/
+private/
+**/private/
+
+# BlueJ
+.bluej
+**/.bluej
+*.ctxt
+**/*.ctxt
+
+# Eclipse
+.settings/
+**/.settings/
+.classpath
+.project
+
+# ==========================================
+# Sistema Operativo y Archivos Temporales
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
