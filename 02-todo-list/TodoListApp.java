@@ -1,6 +1,6 @@
-import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import javax.swing.*;
 
 public class TodoListApp extends JFrame {
 	private DefaultListModel modeloLista;
@@ -45,7 +45,7 @@ public class TodoListApp extends JFrame {
 		// --- PANEL CENTRAL: Lista de Tareas ---
         modeloLista = new DefaultListModel<>();
         listaTareas = new JList<>(modeloLista);
-        listaTareas.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        listaTareas.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 15));
         listaTareas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         listaTareas.setFixedCellHeight(35);
 
@@ -59,16 +59,22 @@ public class TodoListApp extends JFrame {
 
         add(panelCentro, BorderLayout.CENTER);
 
-		// --- PANEL INFERIOR: Botones de Acción ---
+        // --- PANEL INFERIOR: Botones de Acción ---
         JPanel panelInferior = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
         panelInferior.setBackground(colorFondo);
 
+        // 1. Crear los botones con sus íconos
         botonCompletar = new JButton("✓ Marcar Completada");
-        botonCompletar.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        botonEliminar = new JButton("🗑 Eliminar");
+
+        // 2. Asignar la fuente 'Segoe UI Symbol' o 'Segoe UI Emoji' para garantizar la lectura de glifos
+        Font fuenteIconos = new Font("Segoe UI Symbol", Font.PLAIN, 13);
+        botonCompletar.setFont(fuenteIconos);
+        botonEliminar.setFont(fuenteIconos);
+
+        // 3. Estilos visuales
         botonCompletar.setFocusable(false);
 
-        botonEliminar = new JButton("🗑 Eliminar");
-        botonEliminar.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         botonEliminar.setBackground(new Color(231, 76, 60));
         botonEliminar.setForeground(Color.WHITE);
         botonEliminar.setFocusable(false);
